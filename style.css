@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #808080; /* لون الخلفية الرمادي المطابق لـ PDF24 */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.toolbar {
+    background-color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 10;
+    gap: 20px;
+}
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.separator {
+    width: 1px;
+    height: 30px;
+    background-color: #e0e0e0;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+button:hover {
+    background-color: #f0f0f0;
+}
+#page-num {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px;
+    font-size: 14px;
+}
+#page-count, #zoom-val {
+    font-size: 14px;
+    color: #555;
+    user-select: none;
+}
+.viewer-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.page-container {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* ظل الورقة */
+}
+/* إعدادات طبقة النص لتتطابق أبعادها مع الكانفاس */
+#text-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    line-height: 1.0;
+}
