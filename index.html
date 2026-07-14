@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتاب صفة صلاة النبي - الألباني</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf_viewer.min.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-group">
+            <button id="prev-page" title="الصفحة السابقة">▲</button>
+            <input type="number" id="page-num" value="1" min="1">
+            <span id="page-count">/ 0</span>
+            <button id="next-page" title="الصفحة التالية">▼</button>
+        </div>
+        <div class="separator"></div>
+        <div class="toolbar-group">
+            <button id="zoom-out" title="تصغير">➖</button>
+            <span id="zoom-val">100%</span>
+            <button id="zoom-in" title="تكبير">➕</button>
+        </div>
+    </div>
+
+    <div class="viewer-container" id="viewer-container">
+        <div id="page-container" class="page-container">
+            <canvas id="pdf-render"></canvas>
+            <div id="text-layer" class="textLayer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
